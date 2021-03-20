@@ -7,10 +7,6 @@ import feedparser
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template("index.html")
-
-@app.route('/covid19')
 def covid():
 
 	#Consumir casos covid
