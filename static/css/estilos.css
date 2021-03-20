@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	font-family: Arial;
+	background-color: #d0d0d0;
+	padding: 50px;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container-content {
+	flex: 1;
+	max-width: 1200px;
+	background-color: #FFF;
+	padding: 20px;
+	display: flex;
+}
+
+#casos {
+	flex: 1;
+	max-width: 900px;
+	padding: 10px;
+}
+
+#noticias {
+	flex: 1;
+	max-width: 300px;
+	justify-content: center;
+	padding: 10px;
+}
+
+.noticias-box {
+	box-shadow: 0px 0px 10px gray;
+	border-radius: 10px;
+	width: auto;
+	padding: 20px;
+}
+
+.covid-header {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+table thead tr {
+	background-color: #d0d0d0;
+}
+
+table thead tr th{
+	padding: 10px 0px;
+	border:1px solid black;
+}
+
+table tbody tr td{
+	padding: 10px 0px;
+	border:1px solid black;
+	text-align: center;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid 19 - Github</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/estilos.css')}}">
+</head>
+<body>
+	<div class="container">
+		<div class="container-content">
+			<div id="casos">
+				<h2 class = "covid-header">Casos Covid 19</h2>
+
+				<h3>Mundialmente</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Total Casos</th>
+							<th>Total Recuperados</th>
+							<th>Muertes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{casos_mundiales['TotalConfirmed']}}</td>
+							<td>{{casos_mundiales['TotalRecovered']}}</td>
+							<td>{{casos_mundiales['TotalDeaths']}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				<h3>Paises</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pais</th>
+							<th>Total Casos</th>
+							<th>Total Recuperados</th>
+							<th>Muertes</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for pais in casos_pais %}
+						<tr>
+							<td>{{pais['Country']}}</td>
+							<td>{{pais['TotalConfirmed']}}</td>
+							<td>{{pais['TotalRecovered']}}</td>
+							<td>{{pais['TotalDeaths']}}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div id="noticias">
+				<h2 class = "covid-header">Noticias recientes</h2>
+				<div class="noticias-box">
+					<hr/>
+					{% for noticia in noticias%}
+						<a href="{{ noticia['link'] }}" target = "_blank">{{noticia['title']}}</a><hr/>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
